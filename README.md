@@ -147,4 +147,4 @@ Chaque fichier contient :
 
 ## Auteur
 
-Application développée dans le cadre d'un projet PHP/MySQL.
+MELC-98.
