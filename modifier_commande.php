@@ -199,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 }
                             ?>
                                 <option value="<?php echo $produit['id']; ?>" data-prix="<?php echo $produit['prix']; ?>" <?php echo ($commande['produit_id'] == $produit['id']) ? 'selected' : ''; ?>>
-                                    <?php echo htmlspecialchars($produit['nom'] . ' - ' . number_format($produit['prix'], 2, ',', ' ') . ' € (Stock: ' . $stockAffiche . ')'); ?>
+                                    <?php echo htmlspecialchars($produit['nom'] . ' - ' . number_format($produit['prix'], 2, ',', ' ') . ' DH (Stock: ' . $stockAffiche . ')'); ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="form-group" id="montant-preview" style="background: #f8f9fa; padding: 15px; border-radius: 5px;">
-                        <strong>Montant total : <span id="montant-total" style="color: #667eea; font-size: 18px;"><?php echo number_format($commande['montant_total'], 2, ',', ' '); ?> €</span></strong>
+                        <strong>Montant total : <span id="montant-total" style="color: #667eea; font-size: 18px;"><?php echo number_format($commande['montant_total'], 2, ',', ' '); ?> DH</span></strong>
                     </div>
 
                     <div class="form-actions">
@@ -234,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const quantite = parseInt(quantiteInput.value) || 0;
             const total = prix * quantite;
             
-            montantTotal.textContent = total.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            montantTotal.textContent = total.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' DH';
         }
 
         produitSelect.addEventListener('change', calculerMontant);

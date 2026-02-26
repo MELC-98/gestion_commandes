@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="form-group">
-                        <label for="prix">Prix (€) *</label>
+                        <label for="prix">Prix (DH) *</label>
                         <input type="number" id="prix" name="prix" step="0.01" min="0.01" value="<?php echo htmlspecialchars($produit['prix']); ?>" required>
                     </div>
 
